@@ -35,7 +35,8 @@ class LanguageSupportContractTest {
             ".c, C",
             ".m, OBJECTIVE_C",
             ".pas, DELPHI",
-            ".rs, RUST"
+            ".rs, RUST",
+            ".bicep, BICEP"
         )
         fun `should map primary extension to correct language`(extension: String, expectedLanguage: String) {
             // Act
@@ -159,7 +160,8 @@ class LanguageSupportContractTest {
             ".mm",
             ".pas",
             ".dpr",
-            ".rs"
+            ".rs",
+            ".bicep"
         )
         fun `should return true for supported extensions`(extension: String) {
             // Assert
@@ -179,6 +181,12 @@ class LanguageSupportContractTest {
 
     @Nested
     inner class GetLanguageContract {
+        @Test
+        fun `should return BICEP for bicep extension`() {
+            // Assert
+            assertThat(TreeSitterMetrics.getLanguage(".bicep")).isEqualTo(Language.BICEP)
+        }
+
         @Test
         fun `should return language for supported extension`() {
             // Assert
@@ -217,7 +225,8 @@ class LanguageSupportContractTest {
                 ".cs",
                 ".cpp",
                 ".c",
-                ".m"
+                ".m",
+                ".bicep"
             )
         }
 

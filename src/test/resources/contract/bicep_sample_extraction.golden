@@ -1,0 +1,25 @@
+# Identifiers
+buildName
+enabledResources
+location
+networking
+prefix
+storage
+storageConfig
+storageName
+suffix
+suffix
+
+# Comments
+Environment-specific suffix.
+Region in which the resources are deployed.
+
+# Strings
+
+-
+./network.bicep
+Microsoft.Storage/storageAccounts@2023-05-01
+dev
+networking
+storage
+westeurope

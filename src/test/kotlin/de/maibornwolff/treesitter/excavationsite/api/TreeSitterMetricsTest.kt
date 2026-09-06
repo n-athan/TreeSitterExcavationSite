@@ -96,6 +96,7 @@ class TreeSitterMetricsTest {
         assertThat(Language.fromExtension(".tsx")).isEqualTo(Language.TSX)
         assertThat(Language.fromExtension(".py")).isEqualTo(Language.PYTHON)
         assertThat(Language.fromExtension(".go")).isEqualTo(Language.GO)
+        assertThat(Language.fromExtension(".bicep")).isEqualTo(Language.BICEP)
         assertThat(Language.fromExtension(".unknown")).isNull()
     }
 
@@ -117,9 +118,9 @@ class TreeSitterMetricsTest {
             ".java", ".kt", ".kts", ".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs",
             ".py", ".go", ".php", ".rb", ".swift", ".sh", ".bash", ".cs",
             ".cpp", ".cc", ".cxx", ".hpp", ".hxx", ".h", ".c", ".m", ".mm",
-            ".vue", ".p", ".cls", ".w", ".i", ".pas", ".dpr", ".rs"
+            ".vue", ".p", ".cls", ".w", ".i", ".pas", ".dpr", ".rs", ".bicep"
         )
-        assertThat(extensions).hasSize(34)
+        assertThat(extensions).hasSize(35)
     }
 
     @Test

@@ -2,6 +2,7 @@ package de.maibornwolff.treesitter.excavationsite.languages
 
 import de.maibornwolff.treesitter.excavationsite.languages.abl.AblDefinition
 import de.maibornwolff.treesitter.excavationsite.languages.bash.BashDefinition
+import de.maibornwolff.treesitter.excavationsite.languages.bicep.BicepDefinition
 import de.maibornwolff.treesitter.excavationsite.languages.c.CDefinition
 import de.maibornwolff.treesitter.excavationsite.languages.cpp.CppDefinition
 import de.maibornwolff.treesitter.excavationsite.languages.csharp.CSharpDefinition
@@ -24,6 +25,7 @@ import de.maibornwolff.treesitter.excavationsite.shared.domain.LanguageDefinitio
 import org.treesitter.TSLanguage
 import org.treesitter.TreeSitterAbl
 import org.treesitter.TreeSitterBash
+import org.treesitter.TreeSitterBicep
 import org.treesitter.TreeSitterC
 import org.treesitter.TreeSitterCSharp
 import org.treesitter.TreeSitterCpp
@@ -71,6 +73,7 @@ object LanguageRegistry {
         Language.ABL -> TreeSitterAbl()
         Language.DELPHI -> TreeSitterPascal()
         Language.RUST -> TreeSitterRust()
+        Language.BICEP -> TreeSitterBicep()
     }
 
     /**
@@ -96,5 +99,6 @@ object LanguageRegistry {
         Language.ABL -> AblDefinition
         Language.DELPHI -> DelphiDefinition
         Language.RUST -> RustDefinition
+        Language.BICEP -> BicepDefinition
     }
 }

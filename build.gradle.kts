@@ -13,6 +13,7 @@ version = "0.9.1"
 
 val treeSitterTsxJar = "libs/tree-sitter-tsx-0.23.2.jar"
 val treeSitterPascalJar = "libs/tree-sitter-pascal-0.10.2.jar"
+val treeSitterBicepJar = "libs/tree-sitter-bicep-1.1.0.jar"
 
 repositories {
     mavenCentral()
@@ -43,6 +44,7 @@ dependencies {
     implementation(libs.treesitter.abl)
     implementation(files(treeSitterTsxJar))
     implementation(files(treeSitterPascalJar))
+    implementation(files(treeSitterBicepJar))
 
     // Testing
     testImplementation(libs.junit.jupiter.api)
@@ -69,6 +71,7 @@ detekt {
 tasks.jar {
     from(zipTree(treeSitterTsxJar))
     from(zipTree(treeSitterPascalJar))
+    from(zipTree(treeSitterBicepJar))
 }
 
 tasks.test {
